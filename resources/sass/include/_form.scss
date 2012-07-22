@@ -1,0 +1,6 @@
+
+.x-panel-body {
+  @include border-top-radius(5px);
+  background: #fff;
+  border: 1px solid #999;
+}

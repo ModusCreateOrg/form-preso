@@ -1,0 +1,100 @@
+[
+	{
+		"id": 0,
+		"name": "Modus Create, Inc.",
+		"headCount": 15,
+		"employees": [
+			{
+				"name": "Pat Sheridan",
+				"title": "Founder and Principal"
+			},
+			{
+				"name": "Jay Garcia",
+				"title": "Founder and Principal"
+			},
+			{
+				"name": "Aaron Smith",
+				"title": "Principal"
+			},
+			{
+				"name": "Richard Bullington-McGuire",
+				"title": "Principal"
+			},
+			{
+				"name": "Wil Boayue",
+				"title": "Architect"
+			},
+			{
+				"name": "Grgur Grisogono",
+				"title": "Architect"
+			},
+			{
+				"name": "Mike Schwartz",
+				"title": "Architect"
+			},
+			{
+				"name": "Steve Dalgetty",
+				"title": "Project Manager"
+			},
+			{
+				"name": "Dave Ackerman",
+				"title": "Engineer"
+			},
+			{
+				"name": "Tim Eagan",
+				"title": "Engineer"
+			},
+			{
+				"name": "Stan Bershadskiy",
+				"title": "Engineer"
+			},
+			{
+				"name": "Tyler Knappe",
+				"title": "Engineer"
+			},
+			{
+				"name": "Crysfel Villa",
+				"title": "Engineer"
+			}
+		],
+		"locations": [
+			{
+				"address1": "12355 Sunrise Valley Dr",
+				"address2": "Suite 170",
+				"city": "Reston",
+				"state": "VA",
+				"zip": 20191,
+				"isHeadquarters": true
+			}
+		]
+	},
+	{
+		"id": 1,
+		"name": "Sencha",
+		"headCount": 200,
+		"employees": [
+			{
+				"name": "Michael Mullany",
+				"title": "CEO"
+			},
+			{
+				"name": "Ted Drischoll",
+				"title": "Vice President, Worldwide Sales"
+			},
+			{
+				"name": "Jeff Hartley",
+				"title": "Vice President, Services"
+			}
+		],
+		"locations": [
+			{
+				"address1": "1700 Seaport Blvd",
+				"address2": "Suite 120",
+				"city": "Redwood City",
+				"state": "CA",
+				"zip": 94063,
+				"isHeadquarters": true
+			}
+		]
+	}
+]

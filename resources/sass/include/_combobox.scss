@@ -1,0 +1,41 @@
+.x-form-trigger-input-cell {
+    input {
+      @include border-right-radius(0px);
+      text-overflow: ellipsis;
+    }
+}
+.x-trigger-cell {
+    width: 25px !important;
+}
+.x-unselectable .x-form-trigger-input-cell {
+    input {
+      @include border-right-radius(5px);
+    }
+}
+
+.x-form-trigger {
+    height: 30px !important;
+    width: 25px !important;
+    background-image: url(../images/trigger.png);
+    background-position: -50px 0;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #999;
+    @include border-right-radius(5px);
+}
+
+.x-form-trigger-over {
+    background-position: -50px 0 !important;
+}
+
+.x-form-trigger-click {
+    background-position: -75px 0 !important;
+}
+
+.x-item-disabled .x-form-trigger {
+    opacity: 0.3;
+}
+
+.x-form-invalid .x-form-trigger {
+    border-color: #c30;
+}

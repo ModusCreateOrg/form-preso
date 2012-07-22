@@ -1,0 +1,94 @@
+.x-btn {
+  @include border-radius(5px);
+  padding: 6px;
+  border-color: #999;
+
+  .x-btn-inner {
+    font-weight: bold;
+    font-size: 13px;
+  }  
+}
+
+.action-btn {
+  @include background-image(linear-gradient(lighten($accentColor, 5), darken($accentColor, 5)));
+
+  .x-btn-inner, .x-btn-icon {
+    color: #fff !important;
+    @include text-shadow(1px 1px #000);
+  }
+
+  &.x-btn-over {
+    @include background-image(linear-gradient(lighten($accentColor, 15), lighten($accentColor, 5)));
+  }
+
+  &.x-btn-pressed {
+    @include background-image(linear-gradient(darken($accentColor, 5), darken($accentColor, 15)));
+  }
+}
+
+.delete-btn {
+  @include background-image(linear-gradient(lighten($deleteColor, 5), darken($deleteColor, 5)));
+
+  .x-btn-inner, .x-btn-icon {
+    color: #fff !important;
+    @include text-shadow(1px 1px #000);
+  }
+
+  &.x-btn-over {
+    @include background-image(linear-gradient(lighten($deleteColor, 15), lighten($deleteColor, 5)));
+  }
+
+  &.x-btn-pressed {
+    @include background-image(linear-gradient(darken($deleteColor, 5), darken($deleteColor, 15)));
+  }
+}
+
+.cancel-btn {
+  @include background-image(linear-gradient(darken($cancelColor, 10), darken($cancelColor, 20)));
+
+  .x-btn-inner, .x-btn-icon {
+    color: #000 !important;
+    @include text-shadow(1px 1px #fff);
+  }
+
+  &.x-btn-over {
+    @include background-image(linear-gradient(darken($cancelColor, 20), darken($cancelColor, 30)));
+  }
+
+  &.x-btn-pressed {
+    @include background-image(linear-gradient(darken($cancelColor, 20), darken($cancelColor, 30)));
+  }
+}
+
+.x-btn-icon {
+    font-family: "Pictos";
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    overflow: visible;
+    position: absolute;
+    background-repeat: no-repeat;
+    height: 17px;
+    line-height: 15px;
+    font-size: 15px;
+    font-weight: normal;
+
+    &.edit::before {
+        content: "p";
+    }
+    &.save::before {
+        content: "O";
+    }
+    &.cancel::before {
+        content: "d";
+    }
+    &.add::before {
+        content: "+";
+    }
+    &.delete::before {
+        content: "-";
+    }
+    &.reset::before {
+        content: "1";
+    }
+}

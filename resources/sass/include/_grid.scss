@@ -1,0 +1,71 @@
+.x-grid {
+
+  .x-column-header, .x-grid-header-ct {
+    @include background-image(linear-gradient(darken(#eee, 10), darken(#eee, 20)));
+    border-color: #999;
+  }
+
+  .x-column-header-text {
+    @include text-shadow(0px 1px #fff);
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  .x-grid-header-ct {
+    @include border-top-radius(5px);
+  }
+
+  .x-column-header-first {
+    @include border-top-left-radius(5px);
+    .x-column-header-over {
+      @include border-top-left-radius(5px);
+    }
+  }
+
+  .x-column-header-last {
+    @include border-top-right-radius(5px);
+    border-right-color: transparent;
+    .x-column-header-over, .x-column-header-trigger {
+      @include border-top-right-radius(5px);
+    }
+  }
+
+  &.with-toolbar {
+    .x-grid-header-ct {
+      @include border-top-radius(0px);
+      border-top-width: 1px !important;
+    }
+
+    .x-column-header-first {
+      @include border-top-left-radius(0px);
+      .x-column-header-over {
+        @include border-top-left-radius(0px);
+      }
+    }
+
+    .x-column-header-last {
+      @include border-top-right-radius(0px);
+      .x-column-header-over, .x-column-header-trigger {
+        @include border-top-right-radius(0px);
+      }
+    }
+  }
+
+  .x-column-header-over {
+    @include background-image(linear-gradient(lighten(#167cce, 50), lighten(#0d60a3, 50)));
+  }
+
+  .x-grid-body {
+    border-color: #999;
+    @include border-top-radius(0px);
+
+    .x-grid-row-selected {
+      .x-grid-cell, .x-grid-rowwrap-div {
+        background-color: lighten(#074e89, 15) !important;
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+.x-field {
+  label {
+    padding-bottom: 1px !important;
+    padding-left: 5px !important;
+  }
+
+  input {
+    line-height: 30px;
+    height: 30px !important;
+    font-size: 20px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    background-image: none;
+
+    @include border-radius(5px);
+    &::-webkit-input-placeholder {
+      font-weight: bold;
+    }
+
+    &:-moz-placeholder {}
+  }
+
+  &.read-only input {
+    border-color: transparent;
+  }
+}
+
+label {
+  margin-bottom: 0 !important;
+  padding-left: 4px !important;
+  font-size: 13px;
+  color: #666;
+  line-height: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #fff;
+  display: block;
+}
+
+.add-icon {
+  position: absolute;
+  height: 14px;
+  width: 19px;
+  right: 20px;
+  cursor: pointer;
+  top: 24px;
+  color: $accentColor;
+  font-family: "Pictos";
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  overflow: visible;
+  background-repeat: no-repeat;
+  line-height: 15px;
+  font-size: 15px;
+  font-weight: normal;
+
+  &:hover {
+    color: lighten($accentColor, 10);
+    text-shadow: 1px 1px #555;
+  }
+  &::before {
+    content: "+";
+  }
+}
+
+.dataview-emptytext {
+  padding-left: 4px;
+}
+
+.dataviewfields {
+  overflow: auto;
+  width: 100%;
+
+  .dataviewfields-row {
+    border: 1px solid #999;
+    border-top-width: 0;
+    overflow: hidden;
+
+    .data {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 2px 0 2px 4px;
+      font-size: 15px;
+      width: 80%;
+
+      div {
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    .hq {
+      font-weight: bold;
+    }
+    .name {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .title {
+      font-size: 15px;
+    }
+
+    .icons {
+      text-align: right;
+      width: 20%;
+      display: inline-block;
+      vertical-align: middle;
+
+      .edit-icon {
+        float: right;
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+        cursor: pointer;
+        color: $accentColor;
+        font-family: "Pictos";
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        overflow: visible;
+        background-repeat: no-repeat;
+        line-height: 16px;
+        font-size: 15px;
+        font-weight: normal;
+        &:hover {
+          color: lighten($accentColor, 10);
+          text-shadow: 1px 1px #555;
+        }
+        &::before {
+          content: "p";
+        }
+      }
+      .delete-icon {
+        float: right;
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+        cursor: pointer;
+        color: $deleteColor;
+        font-family: "Pictos";
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        overflow: visible;
+        background-repeat: no-repeat;
+        height: 17px;
+        line-height: 15px;
+        font-size: 15px;
+        font-weight: normal;
+        &:hover {
+          color: lighten($deleteColor, 10);
+          text-shadow: 1px 1px #555;
+        }
+        &::before {
+          content: "-";
+        }
+      }
+    }
+        
+    &:first-child {
+      @include border-top-radius(5px);
+      border-top-width: 1px;
+    }
+    &:last-child {
+      @include border-bottom-radius(5px);
+    }
+    &:nth-child(odd) {
+      background-color: #fff;
+    }
+    &:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+.read-only {
+  .add-icon, .icons {
+    display: none !important;
+  }
+
+  label {
+    border-bottom: 1px solid #999;
+    display: block;
+  }
+
+  .dataviewfields {
+    overflow: auto;
+    width: 100%;
+
+    div.dataviewfields-row {
+      padding: 0px 1px 0px 1px;
+      border-width: 0px 0px 1px 0px;
+      &:first-child {
+        padding: 1px 1px 0px 1px;
+      }
+      &:last-child {
+        padding: 0px 1px 1px 1px;
+        border-bottom-width: 0px;
+      }
+      &:only-child {
+        padding: 1px !important;
+      }
+    }
+  }
+}

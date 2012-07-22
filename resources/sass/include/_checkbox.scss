@@ -1,0 +1,55 @@
+.checkbox {
+  height: 45px;
+    
+  .x-form-cb-wrap {
+    background: none;
+        
+    input {
+      display: none;
+    }
+        
+    label {
+      border: 1px solid #fff;
+      @include border-radius(5px);
+      color: #B9B9B9;
+      margin: 0;
+      padding: 4px 5px;
+      height: 28px;
+      line-height: 16px;
+      font-size: 16px;
+      font-weight: normal;
+      cursor: pointer;
+
+      &::before {
+        color: #DDD;
+        font-family: "Pictos";
+        @include background-clip(text);
+        content: "2";
+        padding-right: 5px;
+      }
+        
+      &:hover {
+        cursor: hand;
+        @include background-image(linear-gradient(#2E96E9, #117CD2));
+        color: #FFF;    
+        content: "3" !important;
+      }
+    }
+  }
+        
+  &.x-form-cb-checked label {
+    border: 1px solid #999;
+    color: #333;
+    @include text-shadow(0px 1px #eee);
+        
+    &::before {
+        color: #090;
+        @include text-shadow(0px 1px #333);
+        content: "3";
+    }
+    
+    &:hover {
+        content: "2" !important;
+    }
+  }
+}
