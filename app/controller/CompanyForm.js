@@ -38,16 +38,18 @@ Ext.define('FormPreso.controller.CompanyForm', {
     onSaveClick: function(btn) {
         var form = this.getForm(), 
             record = form.getForm().getRecord(),
-            grid = this.getGrid();
+            grid = this.getGrid(),
+            selModel = grid.getSelectionModel();
 
         form.commit();
 
         if (form.addMode) {
-            form.setAddMode(false);
             grid.store.add(record);
-            grid.getSelectionModel().select(record);
         }
-        form.setReadOnly(true);
+
+        form.loadRecord(record); //allows form to no longer be dirty
+        selModel.deselect(record); //circumvent ExtJS bug
+        selModel.select(record); //make sure this record is selected
     },
 
     onCancelClick: function(btn) {
@@ -64,7 +66,7 @@ Ext.define('FormPreso.controller.CompanyForm', {
         this.getForm().getForm().reset();
     },
 
-    onSave: function(form, model, success) {
+    onSave: function(form, record, success) {
         if (success) {
             Ext.Msg.alert('Success', 'Company has been updated.');
         } else {
