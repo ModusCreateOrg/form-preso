@@ -1,0 +1,3 @@
+Run this in a webserver. It uses Ajax to populate the store.
+
+Styling should be mostly cross-browser, but I've only tried Chrome.
