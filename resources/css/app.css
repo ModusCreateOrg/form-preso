@@ -10389,9 +10389,9 @@ label {
       font-size: 15px; }
     /* line 104, ../sass/include/_fields.scss */
     .dataviewfields .dataviewfields-row .icons {
+      display: none;
       text-align: right;
       width: 20%;
-      display: inline-block;
       vertical-align: middle; }
       /* line 110, ../sass/include/_fields.scss */
       .dataviewfields .dataviewfields-row .icons .edit-icon {
@@ -10477,30 +10477,36 @@ label {
     /* line 171, ../sass/include/_fields.scss */
     .dataviewfields .dataviewfields-row:nth-child(even) {
       background-color: #f9f9f9; }
+    /* line 175, ../sass/include/_fields.scss */
+    .dataviewfields .dataviewfields-row:hover {
+      background-color: #efefef; }
+      /* line 177, ../sass/include/_fields.scss */
+      .dataviewfields .dataviewfields-row:hover .icons {
+        display: inline-block; }
 
-/* line 178, ../sass/include/_fields.scss */
+/* line 185, ../sass/include/_fields.scss */
 .read-only .add-icon, .read-only .icons {
   display: none !important; }
-/* line 182, ../sass/include/_fields.scss */
+/* line 189, ../sass/include/_fields.scss */
 .read-only label {
   border-bottom: 1px solid #999;
   display: block; }
-/* line 187, ../sass/include/_fields.scss */
+/* line 194, ../sass/include/_fields.scss */
 .read-only .dataviewfields {
   overflow: auto;
   width: 100%; }
-  /* line 191, ../sass/include/_fields.scss */
+  /* line 198, ../sass/include/_fields.scss */
   .read-only .dataviewfields div.dataviewfields-row {
     padding: 0px 1px 0px 1px;
     border-width: 0px 0px 1px 0px; }
-    /* line 194, ../sass/include/_fields.scss */
+    /* line 201, ../sass/include/_fields.scss */
     .read-only .dataviewfields div.dataviewfields-row:first-child {
       padding: 1px 1px 0px 1px; }
-    /* line 197, ../sass/include/_fields.scss */
+    /* line 204, ../sass/include/_fields.scss */
     .read-only .dataviewfields div.dataviewfields-row:last-child {
       padding: 0px 1px 1px 1px;
       border-bottom-width: 0px; }
-    /* line 201, ../sass/include/_fields.scss */
+    /* line 208, ../sass/include/_fields.scss */
     .read-only .dataviewfields div.dataviewfields-row:only-child {
       padding: 1px !important; }
 

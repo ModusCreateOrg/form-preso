@@ -102,9 +102,9 @@ label {
     }
 
     .icons {
+      display: none;
       text-align: right;
       width: 20%;
-      display: inline-block;
       vertical-align: middle;
 
       .edit-icon {
@@ -170,6 +170,13 @@ label {
     }
     &:nth-child(even) {
       background-color: #f9f9f9;
+    }
+
+    &:hover {
+      background-color: #efefef;
+      .icons {
+        display: inline-block;
+      }
     }
   }
 }
